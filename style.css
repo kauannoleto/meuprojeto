@@ -1,0 +1,194 @@
+/* Cabeçalho do projeto Connecta: logo, menu e botões */
+
+
+/* Variáveis de cores e fonte */
+:root {
+    --color-primary: #00a99d;
+    --color-primary-dark: #008f85;
+    --color-text: #26374a;
+    --color-text-light: #777777;
+    --color-border: #dddddd;
+    --color-bg: #ffffff;
+
+    --font-main: Arial, sans-serif;
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Configurações gerais */
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+}
+
+
+/* Cabeçalho */
+.header {
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+/* Container do cabeçalho */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+}
+
+
+/* Imagem da logo */
+.logo img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+
+/* Texto da logo */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Nome Connecta */
+.logo-title {
+    color: var(--color-text);
+
+    font-size: 25px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* Texto Agenda de Contatos */
+.logo-subtitle {
+    color: #999999;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Menu de navegação */
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+/* Links do menu */
+.nav-link {
+    text-decoration: none;
+
+    color: var(--color-text-light);
+
+    font-size: 15px;
+
+    transition: color 0.2s ease;
+}
+
+
+/* Quando passar o mouse */
+.nav-link:hover {
+    color: var(--color-text);
+}
+
+
+/* Link da página atual */
+.nav-link.active {
+    color: var(--color-primary);
+
+    font-weight: 600;
+}
+
+
+/* Área dos botões */
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* Botão Entrar */
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 22px;
+
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    color: var(--color-text-light);
+
+    font-size: 15px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Efeito ao passar o mouse em Entrar */
+.login-button:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Botão Criar Conta */
+.create-button {
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--color-primary);
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+
+/* Efeito ao passar o mouse em Criar Conta */
+.create-button:hover {
+    background-color: var(--color-primary-dark);
+}

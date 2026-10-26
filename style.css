@@ -192,3 +192,59 @@ body {
 .create-button:hover {
     background-color: var(--color-primary-dark);
 }
+
+
+/* Botão do menu: aparece somente em telas pequenas */
+.menu-toggle {
+    display: none;
+
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+
+    background-color: var(--color-bg);
+    color: var(--color-text);
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Ajustes para celulares e telas pequenas */
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* O JavaScript adiciona esta classe ao clicar */
+    .main-nav.ativo {
+        display: flex;
+    }
+
+    .header-actions {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    /* Mostra os botões junto com o menu aberto */
+    .header-container:has(.main-nav.ativo) .header-actions {
+        display: flex;
+    }
+}
